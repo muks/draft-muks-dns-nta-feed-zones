@@ -151,7 +151,7 @@
           </tr>
           <tr>
             <td>EXPIRY</td>
-            <td>unsigned integer</td>
+            <td>Unsigned integer</td>
             <td>64 bits (8 octets)</td>
           </tr>
         </tbody>
@@ -168,18 +168,25 @@
       time per Section <xref target="RFC7646" section="4"
       sectionFormat="bare">Removal of a Negative Trust Anchor</xref> of
       <xref target="RFC7646" />.</t>
-      
-      <t>The owner name of an NTA RRset also encodes the domain name of
-      the NTA relative to the NTA feed zone's origin as a matter of
-      convenience for implementations to make use of. This is so that
-      negative trust anchors may be queried as part of a zone's existing
-      domain name tree structure.</t>
+
+      <t>The presentation format of the NTA RDATA consists of the DOMAIN
+      field in <xref target="RFC1035"/> DNS name presentation format,
+      followed by the EXPIRY field in decimal representation without any
+      sign symbols (e.g., the string output returned by printing the
+      field's value using the <tt>"%" PRIu64</tt> format string in
+      C). An example can be seen in <xref target="sec_example" />.</t>
 
     </section>
 
     <section anchor="sec_nta_feed_zone">
 
       <name>NTA feed zone</name>
+
+      <t>The owner name of an NTA RRset also encodes the domain name of
+      the NTA relative to the NTA feed zone's origin as a matter of
+      convenience for implementations to make use of. This is so that
+      negative trust anchors may be queried as part of a zone's existing
+      domain name tree structure.</t>
 
       <t>TBD.</t>
 
@@ -218,7 +225,7 @@
 
     </section>
 
-    <section>
+    <section anchor="sec_example">
 
       <name>Example NTA feed zone</name>
 
