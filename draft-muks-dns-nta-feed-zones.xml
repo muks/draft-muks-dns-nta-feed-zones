@@ -230,8 +230,8 @@
       <t>Zero or more NTA feed zones may be configured at a validating
       recursive name server or DNSSEC validator. If NTAs with identical
       domain occur among multiple NTA feed zones, it is RECOMMENDED that
-      the first corresponding NTA in configured order be used and the
-      remaining occurences be discarded.</t>
+      the first corresponding NTA in configured order of NTA feed zones
+      be used and the remaining occurences be discarded.</t>
 
       <t>The requirements in <xref
       target="sec_security_considerations"/> also form a part of these
