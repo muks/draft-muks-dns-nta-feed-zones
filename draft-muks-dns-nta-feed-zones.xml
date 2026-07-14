@@ -99,7 +99,7 @@
       filtering information on their own, so they make use of Response
       Policy Zones <xref target="I-D.vixie-dnsop-dns-rpz" /> to provide
       this information for their resolvers. The responsibility of
-      generating the information in RPZ is delgated to one or more
+      generating the information in RPZ is delegated to one or more
       trusted 3rd-parties.</t>
 
       <t>This draft introduces NTA feed zones, which are specially
@@ -260,7 +260,7 @@
       recursive name server or DNSSEC validator. If NTAs with identical
       domain occur among multiple NTA feed zones, it is RECOMMENDED that
       the first corresponding NTA in configured order of NTA feed zones
-      be used and the remaining occurences be discarded.</t>
+      be used and the remaining occurrences be discarded.</t>
 
       <t>The requirements in <xref
       target="sec_security_considerations"/> also form a part of these
@@ -360,7 +360,7 @@ example.com         NTA example.com. 1783972008
       <name>Acknowledgements</name>
 
       <t>The idea of transferring NTAs to validators by representing
-      them as transferrable DNS zones is based on Response Policy Zones
+      them as transferable DNS zones is based on Response Policy Zones
       <xref target="I-D.vixie-dnsop-dns-rpz" />.</t>
 
     </section>
