@@ -243,6 +243,16 @@
 
       <t>TBD.</t>
 
+      <t>If the NTA feed zone contents become stale or expire due to any
+      reason, all the configured NTAs derived from that feed zone MUST
+      be unconfigured and removed as soon as the condition is
+      detected.</t>
+
+      <t>If any NTAs that existed in a previous version of the NTA feed
+      zone have been deleted in a new version of the zone, such NTAs
+      must be unconfigured and removed immediately after the new zone's
+      contents are received by the consumer.</t>
+
       <t>RRsets other than that of RR type NTA in the NTA feed zone MUST
       be ignored by the consumer.</t>
 
@@ -313,16 +323,6 @@ example.com         NTA example.com. 1783972008
       zones, the DNSSEC validator must ensure that any NTAs whose expiry
       time is more than 1 week from the current time are either clamped
       to 1 week from the current time or discarded.</t>
-
-      <t>If the NTA feed zone contents become stale or expire due to any
-      reason, all the configured NTAs derived from that feed zone MUST
-      be unconfigured and removed as soon as the condition is
-      detected.</t>
-
-      <t>If any NTAs that existed in a previous version of the NTA feed
-      zone have been deleted in a new version of the zone, such NTAs
-      must be unconfigured and removed immediately after the new zone's
-      contents are received by the consumer.</t>
 
     </section>
 
