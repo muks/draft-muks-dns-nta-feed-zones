@@ -214,7 +214,7 @@
       <t>NTA feed zones encode a list of negative trust anchors within a
       DNS zone using the NTA RR type. If the reader would like to view
       an example first, it may be found in <xref target="sec_example"
-      />.
+      />.</t>
 
       <t>The owner name of an NTA RRset also encodes the domain name of
       the NTA relative to the NTA feed zone's origin as a matter of
