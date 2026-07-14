@@ -314,11 +314,11 @@ example.com         NTA example.com. 1783972008
       content. This has at least three aspects of consideration: whether
       the producers of the the NTA feed zones are trusted, whether the
       NTA feed zones are regularly maintained by their producers to
-      match current network conditions, and whether access to NTA feed
-      zones is operationally available without disruption. An example
-      relationship may be that the producer is the consumer's DNS
-      resolver vendor and the consumer has a legal agreement with that
-      vendor and trusts that vendor.</t>
+      match current network conditions, and whether NTA feed zones are
+      operationally available to consumers without disruption. An
+      example relationship may be that the producer is the consumer
+      operator's DNS resolver vendor and the consumer operator has a
+      legal agreement with that vendor and trusts that vendor.</t>
 
       <t>It is strongly RECOMMENDED that DNS zone transfer initiators
       (clients) of NTA feed zone consumers verify the authenticity and
