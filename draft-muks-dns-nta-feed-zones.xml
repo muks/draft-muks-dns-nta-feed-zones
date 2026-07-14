@@ -322,15 +322,15 @@ example.com         NTA example.com. 1783972008
 
       <t>It is strongly RECOMMENDED that NTA feed zone consumer
       operators regularly establish whether the party producing the NTA
-      feed zones can be trusted and relied on for their NTA feed zones'
+      feed zones can be relied on for their NTA feed zones'
       content. This has at least three aspects of consideration: whether
-      the NTA configuration in the feed zones is correct and accurate,
-      whether it is regularly maintained to be current by the producer
-      of the NTA feed zone to match current network conditions, and
-      whether access to the NTA feed zone is operationally available
-      without disruption. An example relationship may be that the
-      producer is the consumer's DNS resolver vendor and the consumer
-      has a legal agreement with that vendor and trusts that vendor.</t>
+      the producers of the the NTA feed zones are trusted, whether the
+      NTA feed zones are regularly maintained by their producers to
+      match current network conditions, and whether NTA feed zones are
+      operationally available to consumers without disruption. An
+      example relationship may be that the producer is the consumer
+      operator's DNS resolver vendor and the consumer operator has a
+      legal agreement with that vendor and trusts that vendor.</t>
 
       <t>It is strongly RECOMMENDED that DNS zone transfer initiators
       (clients) of NTA feed zone consumers verify the authenticity and
@@ -343,8 +343,9 @@ example.com         NTA example.com. 1783972008
       SHOULD NOT exceed a week. When NTAs are received via NTA feed
       zones, the DNSSEC validator must ensure that any NTAs whose expiry
       time is more than 1 week from the current time are either clamped
-      to 1 week from the current time or discarded. NTAs whose EXPIRY
-      time has already passed MUST NOT be used.</t>
+      to 1 week from the current time or discarded.</t>
+
+      <t>NTAs whose EXPIRY time has already passed MUST NOT be used.</t>
 
     </section>
 
