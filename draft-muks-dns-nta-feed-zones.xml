@@ -331,8 +331,9 @@ example.com         NTA example.com. 1783972008
       SHOULD NOT exceed a week. When NTAs are received via NTA feed
       zones, the DNSSEC validator must ensure that any NTAs whose expiry
       time is more than 1 week from the current time are either clamped
-      to 1 week from the current time or discarded. NTAs whose EXPIRY
-      time has already passed MUST NOT be used.</t>
+      to 1 week from the current time or discarded.</t>
+
+      <t>NTAs whose EXPIRY time has already passed MUST NOT be used.</t>
 
     </section>
 
