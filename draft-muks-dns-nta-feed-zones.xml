@@ -60,10 +60,11 @@
 
     <abstract>
 
-      <t>This memo documents a method for expressing DNS negative trust
-      anchors <xref target="RFC7646"/> inside a specially constructed
-      DNS zone, that validating recursive name servers and other DNSSEC
-      validators may download and use.</t>
+      <t>This memo documents a method for expressing a list of DNS
+      negative trust anchors <xref target="RFC7646"/> inside a specially
+      constructed DNS zone, that validating recursive name servers and
+      other DNSSEC validators may configure negative trust anchors
+      from.</t>
 
     </abstract>
 
@@ -74,23 +75,23 @@
 
       <name>Introduction</name>
 
-      <t>As DNSSEC deployment increases, there are more incidents where
-      a domain is unavailable due to DNSSEC validator related issues
-      such as those described in Section <xref target="RFC7646"
-      section="1" sectionFormat="bare">Introduction and
-      Motivation</xref> of <xref target="RFC7646" />. The concept of
-      Negative Trust Anchors (NTA) <xref target="RFC7646" /> was
-      introduced to temporarily workaround such DNSSEC validation
-      issues.</t>
+      <t>As DNSSEC deployment increases, there are more and more
+      incidents where a secure trust chain to validate a domain is not
+      available due to DNSSEC validation-related issues such as those
+      described in Section <xref target="RFC7646" section="1"
+      sectionFormat="bare">Introduction and Motivation</xref> of <xref
+      target="RFC7646" />. The concept of Negative Trust Anchors (NTA)
+      <xref target="RFC7646" /> was introduced to temporarily workaround
+      such DNSSEC validation issues.</t>
 
-      <t>Use of NTAs currently require operators to follow a range of
+      <t>Use of NTAs currently requires operators to follow a range of
       requirements which many DNS validating resolver operators are
       poorly equipped to follow. There are many DNS resolver operators
       who run commercial off-the-shelf resolver implementations, e.g.,
       in the form of network appliances, but do not have the ability to
-      generate, manage, and regularly evaluate NTAs on their own. Many
-      DNS resolver operators typically depend on their software vendors
-      to manage many aspects of DNS operation for them
+      generate, manage, and regularly re-evaluate application of NTAs on
+      their own. Many DNS resolver operators typically depend on their
+      software vendors to manage many aspects of DNS operation for them
       automatically.</t>
 
       <t>As an analogous example, many DNS resolver operators also do
@@ -105,8 +106,8 @@
       formatted DNS zones that communicate lists of NTAs from their
       producers to their consumers.</t>
 
-      <t>Consumer software such as validating resolvers and other DNSSEC
-      validators may configure NTAs from NTA feed zones
+      <t>NTA feed zone consumer software such as validating resolvers
+      and other DNSSEC validators may configure NTAs from NTA feed zones
       automatically. This draft obsoletes the text "Use of an NTA MUST
       NOT be automatic." in Section <xref target="RFC7646" section="2.1"
       sectionFormat="bare">Applicability of Negative Trust
@@ -116,6 +117,14 @@
       consumption of NTA feed zones at validating resolvers as described
       in <xref target="sec_consumers" /> is expected to be fully
       automatic.</t>
+
+      <t>NTA feed zones provides managed NTAs for those operators who
+      are incapable of applying and maintaining NTAs on their own, so
+      that they make use of negative trust anchors which they may be
+      unable to use otherwise. The use of NTA feed zones is
+      OPTIONAL. Operators who wish to make use of them may do so, and
+      those who wish to manage NTAs on their own do not have to use NTA
+      feed zones.</t>
 
     </section>
 
